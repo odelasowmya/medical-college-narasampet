@@ -1,0 +1,1536 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+     
+nav.navbar.bootsnav{
+    background-color: #6d320a;
+    font-family: 'Nunito', sans-serif;
+    min-height: 23px;
+    padding: 0;
+    margin-bottom: 150px;
+    border: none;
+}
+nav.navbar.bootsnav .navbar-collapse{ padding: 0; }
+nav.navbar.bootsnav ul.nav > li > a{
+    color: #fff;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 1px;
+    padding: 7px 10px 5px;
+    margin: 0 15px 0 0;
+    border: none;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > a{ padding: 7px 20px 5px 10px; }
+nav.navbar.bootsnav ul.nav > li.active > a,
+nav.navbar.bootsnav ul.nav > li.active > a:hover,
+nav.navbar.bootsnav ul.nav > li > a:hover,
+nav.navbar.bootsnav ul.nav > li.on > a{
+    color: #fff;
+    background-color: transparent;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content li a:hover,
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu li a:hover,
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu li a.dropdown-toggle:active,
+nav.navbar ul.nav li.dropdown.on ul.dropdown-menu li.dropdown.on > a{
+    color: #fff;
+    background: #6d320a;
+}
+nav.navbar.bootsnav ul.nav > li > a>span:before{
+    content: '';
+    background: #6d320a;
+    height: 10px;
+    width: 80%;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: -1;
+    transition: all 0.3s ease 0s;
+}
+nav.navbar.bootsnav ul.nav > li.active > a>span:before,
+nav.navbar.bootsnav ul.nav > li.active > a:hover>span:before,
+nav.navbar.bootsnav ul.nav > li > a:hover>span:before,
+nav.navbar.bootsnav ul.nav > li.on > a>span:before{
+    opacity: 1;
+    top: -10px;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after{
+    color: #fff;
+    font-size: 15px;
+    margin: 0 0 0 7px;
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    transition: all 0.3s;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > ul{
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    transform: translateX(-20px);
+    visibility: hidden;
+    z-index: -1;
+    transition: all 0.3s ease 0s;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown.on > ul{
+    visibility: visible !important;
+    transform: translateX(0);
+}
+.dropdown-menu.multi-dropdown{
+    position: absolute;
+    left: -100% !important;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu{
+    background: transparent;
+    border: none;
+    top: 115%;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu > li > a{
+    color: #fff;
+    background-color: #333;
+    font-weight: 500;
+    padding: 5px 10px;
+    margin: 0 0 5px;
+    border: none;
+    position: relative;
+    transition: all 0.3s;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content{
+    background: #333;
+    overflow: hidden;
+    top: 112%;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content li{ font-size: 14px; }
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .menu-col li a{
+    color: #fff;
+    background-color: transparent;
+    font-weight: 600;
+    padding-left: 10px;
+    margin: 0 0 5px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .menu-col li a:hover{
+    color: #fff;
+    background: #6d320a;
+}
+nav.navbar.bootsnav ul.nav li.megamenu-fw > a:hover,
+nav.navbar.bootsnav ul.nav li.megamenu-fw > a:focus,
+nav.navbar.bootsnav ul.nav li.megamenu-fw.on > a{
+    color: #fff;
+    background-color: transparent !important;
+}
+nav.navbar.bootsnav ul.dropdown-menu.megamenu-content .col-menu{ padding: 0 15px; }
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .title{
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0 0 5px;
+    border-bottom: 2px solid #fff;
+}
+@media only screen and (max-width:990px){
+    .dropdown-menu.multi-dropdown{ left: 0 !important; }
+    nav.navbar.bootsnav{ background: transparent; }
+    nav.navbar.bootsnav{ padding: 5px 10px 10px; }
+    nav.navbar.bootsnav .navbar-toggle{
+        color: #fff;
+        background: #6d320a !important;
+        padding: 5px 8px 3px;
+        margin: 0 0 5px 0;
+        border-radius: 0 !important;
+    }
+    nav.navbar.bootsnav.navbar-mobile .navbar-collapse{ background-color: #6d320a; }
+    nav.navbar.bootsnav ul.nav>li{ margin: 0 auto; }
+    nav.navbar.bootsnav.navbar-mobile ul.nav>li>a{
+        text-align: left;
+        padding: 10px 10px 10px 10px;
+        margin: 10px 0 0;
+    }
+    nav.navbar.bootsnav ul.nav>li.dropdown>a{ padding: 10px 10px 10px 10px; }
+    nav.navbar.bootsnav ul.nav>li.dropdown>a.dropdown-toggle:before{ color: #fff; }
+    nav.navbar.bootsnav ul.nav > li.dropdown > ul{ left: -5px; }
+    nav.navbar.bootsnav ul.nav li.dropdown ul.dropdown-menu{
+        margin: 0 0 -1px 0 !important;
+        z-index: 1;
+    }
+    nav.navbar.bootsnav ul.nav li.dropdown ul.dropdown-menu>li>a{
+        color: #fff;
+        padding: 10px 10px !important;
+        border: none;
+        position: relative;
+    }
+    nav.navbar.bootsnav ul.nav li.dropdown ul.dropdown-menu>li>a:hover{ color: #fff; }
+    nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content{ top: 0; }
+    nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .col-menu .title{
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 0 25px 7px 0 !important;
+        margin: 0 0 5px;
+    }
+    nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .content{
+        background-color: #333;
+        padding: 0;
+        border: none;
+    }
+    nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .col-menu ul.menu-col li a{
+       color: #fff;
+       border: none;
+       padding: 7px 10px !important;
+       margin-bottom: 5px;
+       z-index: 1;
+    }
+    nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .col-menu ul.menu-col li a:hover{
+        color: #fff;
+        background-color: #6d320a;
+    }
+}
+    </style>
+  </head>
+  <body>
+   
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+body, 
+html{
+    font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    overflow-x: hidden;
+}
+/* .page-scroll {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    animation: slide-down 0.7s;
+    background-color: #fff;
+  } */
+/* top menu start here */
+.topmenu {
+    background-color: #1f479c;
+    padding: 8px 0;
+    color: #fff;
+  }
+  .left-top{
+    margin-top: 2px;
+  }
+  .left-top p{
+   margin: 0;
+   font-size: 15px;
+  }
+  .left-top span{
+      color: #fff;
+  }
+  .right-top {
+    text-align: right;
+    margin-right: 20px;
+  }
+  .right-top span {
+    padding: 7px 6px;
+    font-size: 15px;
+}
+  .right-top a{
+      color: #fff;
+  }
+  .mvw{
+      color: #fff;
+  }
+  .left-top a{
+      text-decoration: none;
+  }
+  /* top menu end here */
+
+  .pbmit-slider-content {
+    /* background-color: #00b78b; */
+    padding: 40px 0px;
+    width: 620px;
+}
+
+
+/* about us section starts */
+.pt-100 {
+    padding-top: 6.25rem;
+    padding-bottom: 60px;
+}
+.w-100 {
+    width: 100% !important;
+}
+.position-relative {
+    position: relative !important;
+}
+.gray-layer:before{
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+.opc95:before {
+    opacity: .95;
+}
+.gray-layer:before {
+    background-color: #f3f7fe;
+}
+.fixed-bg {
+    background-attachment: scroll;
+    background-size: cover;
+}
+.fixed-bg, .parallax-bg {
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* z-index: -2; */
+}
+.about-wrap2 {
+    margin-top: -3.125rem;
+}
+.mrg30 {
+    margin: 0 -0.9375rem;
+}
+.about-gal {
+    margin-top: 3.125rem;
+    margin-bottom: -1.25rem;
+}
+.mrg20 {
+    margin: 0 -0.625rem;
+}
+.about-gal-img {
+    margin-bottom: 1.25rem;
+}
+.brd-rd10 {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+.about-gal-img > a:not(.about-play-btn) {
+    display: block;
+    -webkit-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+}
+.about-gal-img > a:not(.about-play-btn):before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0;
+    background-color: #000;
+    -webkit-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+}
+.about-desc {
+    margin-top: 5rem;
+}
+.about-desc > span.thm-clr{
+    border-bottom-color: #e5ae58;
+}
+.about-desc > span:not(.about-time) {
+    border-bottom: 1px solid;
+    font-size: 1rem;
+    font-family: Nunito;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+.thm-clr{
+    color: #00b78b;
+}
+.about-desc > span:not(.about-time) + h2 {
+    margin-top: 1.25rem;
+}
+.about-desc > h2 {
+    font-size: 2.8125rem;
+    line-height: 3.4375rem;
+    font-weight: 800;
+}
+.about-desc > h2 span {
+    font-weight: 400;
+}
+.about-desc > h2 + strong {
+    margin-top: 1.25rem;
+}
+.about-desc > strong {
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    color: #000;
+    font-weight: 700;
+    display: inline-block;
+    width: 100%;
+}
+.about-desc > p + p {
+    margin-top: 1.25rem;
+}
+
+.about-desc > p {
+    font-size: 1.125rem;
+    max-width: 95%;
+}
+.about-gal-img > a:not(.about-play-btn):hover:before, .about-gal-img > a:not(.about-play-btn):focus:before {
+    opacity: .5;
+}
+.about-time{
+    margin-bottom: 30px;
+}
+.about-desc a{
+    background-color: #1f479c;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: #fff;
+}
+
+
+
+
+/* about us section ends */
+
+
+
+/* what we do section starts */
+/* .pt-90{
+    padding-top: 90px;
+} */
+.py-150 {
+    padding-top: 150px;
+}
+.z-1 {
+    z-index: 1;
+}
+.rel {
+    position: relative;
+    padding: 70px 0px;
+}
+.features-image.left-image {
+    border: 1px solid rgba(36, 36, 36, 0.15);
+}
+.features-image {
+    padding: 20px;
+    max-width: 440px;
+    border-radius: 50% 75%;
+}
+.delay-0-2s {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+.features-image img {
+    width: 100%;
+    border-radius: 50% 75%;
+}
+.features-section-content .section-title {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mb-15, .my-15 {
+    margin-bottom: 15px;
+}
+.section-title {
+    z-index: 1;
+    position: relative;
+}
+.text-center .bg-text {
+    left: 50%;
+    -webkit-transform: translate(-50%, -25%);
+    -ms-transform: translate(-50%, -25%);
+    transform: translate(-50%, -25%);
+}
+.bg-text {
+    font-family: "Dancing Script", cursive;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.05);
+}
+.bg-text {
+    font-size: 180px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    line-height: 1;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    -webkit-transform: translate(-25px, -25%);
+    -ms-transform: translate(-25px, -25%);
+    transform: translate(-25px, -25%);
+}
+.home-one .section-title .sub-title {
+    color: #333333;
+}
+.section-title .sub-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    color: #D6B981;
+    display: inline-block;
+    font-family: "Montserrat", sans-serif;
+    text-transform: capitalize;
+}
+.home-one .section-title h2 {
+    text-transform: uppercase;
+}
+.features-item-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.pb-150, .py-150 {
+    padding-bottom: 150px;
+}
+.feature-item {
+    width: 46%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    margin-top: 55px;
+    padding-top: 35px;
+    border-top: 1px solid rgba(36, 36, 36, 0.1);
+}
+.feature-item .icon {
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    font-size: 50px;
+    margin-right: 20px;
+    color: #242424;
+    width: 85px;
+    height: 85px;
+    background: #1f479c;
+    line-height: 67px;
+    border-radius: 50%;
+    text-align: center;
+}
+.icon img{
+    width: 60px;
+}
+.feature-item:hover {
+    border-color: #242424;
+}
+.feature-item h4 {
+    margin: 10px 0 0;
+    font-size: 30px;
+    line-height: 40px;
+}
+.features-image {
+    padding: 20px;
+    max-width: 440px;
+    border-radius: 50% 75%;
+}
+.reatures-leaf {
+    position: absolute;
+    left: 0;
+    top: 10%;
+    max-width: 25%;
+}
+/* what we do section ends */
+
+/* services section starts */
+.section-amenities {
+    position: relative;
+}
+.padding-tb-100 {
+    padding: 50px 0;
+}
+.banner {
+    text-align: center;
+}
+.banner h2 {
+    margin-bottom: 30px;
+    font-size: 40px;
+    line-height: 1.2;
+    color: #000;
+    font-weight: 500;
+}
+.banner h2 span {
+    color: #04bdaf;
+    position: relative;
+    font-weight: 600;
+}
+.m-tb-12 {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.lh-amenities {
+    -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.amenities-detail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+.amenities-detail .amenities-box {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.amenities-left-image {
+    width: 100%;
+    height: 100%;
+}
+.lh-amenities-in {
+    position: relative;
+    padding: 24px;
+}
+.lh-amenities-in h4.side-number {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-size: 55px;
+    font-weight: 800;
+    line-height: 55px;
+    color: rgba(0, 0, 0, 0.05);
+}
+.lh-amenities-in .amenities-contain h4.amenities-heading {
+    font-size: 26px;
+    color: #000;
+    line-height: 1.2;
+    font-weight: 600;
+}
+.lh-amenities-in .amenities-contain p {
+    font-size: 14px;
+    padding: 15px 0;
+}
+.lh-amenities-in .amenities-contain a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #000;
+    font-weight: bold;
+}
+.lh-amenities-in .amenities-contain a i {
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    font-size: 15px;
+    margin-left: 2px;
+}
+.amenities-box img{
+    width: 100%;
+    height: 100%;
+}
+.lh-amenities-in .amenities-contain a:hover i {
+    margin-left: 5px;
+}
+.lh-amenities-in .amenities-contain a i {
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    font-size: 15px;
+    margin-left: 2px;
+}
+/* services section ends */
+
+/* book_appointment section starts */
+.section-contact {
+    padding-bottom: 90px;
+    padding-top: 90px;
+    background-image: linear-gradient(#02020294, #0202028f), url(../images/home-two-banner-bg.jpg);
+}
+.section-heading {
+    margin-bottom: 20px;
+}
+.sub-title {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+    line-height: 1;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.section-title {
+    margin-bottom: 20px;
+    color: #fff;
+}
+.section-disc{
+    color: #fff;
+}
+.contact-list h2{
+    color: #fff;
+}
+.contact-list p {
+    color: #fff;
+}
+.section-contact .video-banner {
+    position: relative;
+}
+.section-contact .video-banner, .section-contact .contact-list {
+    width: 100%;
+}
+.section-contact .contact-list ul {
+    margin-bottom: 0;
+    padding-left: 0;
+}
+.section-contact .contact-list li {
+    color: #fff;
+    list-style: none;
+    margin-bottom: 5px;
+}
+.section-contact .contact-list li i {
+    color: #fff;
+    font-size: 13px;
+    margin-right: 8px;
+}
+.section-contact .home-contact-form {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 25px 10px rgba(0, 0, 0, 0.05);
+    padding: 50px;
+}
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+.section-contact .home-contact-form input, .section-contact .home-contact-form textarea {
+    border: 2px solid #1f479c;
+    width: 100%;
+    border-radius: 5px;
+}
+input[type=text], input[type=email], input[type=url], input[type=password], input[type=search], input[type=number], input[type=tel], input[type=range], input[type=date], input[type=month], input[type=week], input[type=time], input[type=datetime], input[type=datetime-local], input[type=color], textarea {
+    background-color: #F8F8F8;
+    border: 1px solid #d9d9d9;
+    font-size: 14px;
+    padding: 0 10px;
+}
+input[type=text], input[type=email], input[type=url], input[type=password], input[type=search], input[type=number], input[type=tel], input[type=range], input[type=date], input[type=month], input[type=week], input[type=time], input[type=datetime], input[type=datetime-local], input[type=color] {
+    height: 55px;
+}
+textarea {
+    padding: 20px 10px;
+    width: 100%;
+}
+.button-primary {
+    background-color: #1f479c;
+    border: none;
+    color: #ffffff;
+    display: inline-block;
+    position: relative;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    border-radius: 50px;
+}
+.outline-primary, .button-primary {
+    font-size: 16px;
+    line-height: 1.1;
+    padding: 16px 24px;
+    font-weight: 500;
+    /* font-family: "Inter", sans-serif; */
+    text-transform: uppercase;
+}
+
+
+/* book_appointment section ends */
+
+/* testimonialas css starts */
+.testimonials{
+    padding: 40px 0px;
+}
+.testimonials h2{
+    color: #1f479c;
+    text-align: center;
+    font-weight: 600;
+}
+.testimonial{
+    background: #fff;
+    text-align: center;
+    margin: 0 20px;
+}
+.testimonial .description{
+    padding: 40px 30px;
+    margin-bottom: 50px;
+    border-top: 1px solid #1f479c;
+    border-left: 1px solid #1f479c;
+    font-size: 15px;
+    color: #887e7f;
+    line-height: 30px;
+    text-align: left;
+    position: relative;
+}
+.testimonial .description:before{
+    content: "\f10e";
+    font-family: "FontAwesome";
+    font-weight: 900;
+    display: inline-block;
+    float: left;
+    padding: 0 15px 5px 0;
+    font-size: 30px;
+    color: #1f479c;
+    text-align: center;
+    position: relative;
+    top: 8px;
+    left: 0;
+}
+.testimonial .description:after{
+    content: "";
+    width: 50%;
+    height: 1px;
+    background: #2660a4;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.testimonial .testimonial-content{ position: relative; }
+.testimonial .testimonial-content:before{
+    content: "";
+    width: 1px;
+    height: 20px;
+    background: #2660a4;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+}
+.testimonial .testimonial-content:after{
+    content: "";
+    width: 2px;
+    height: 40px;
+    background: #2660a4;
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    transform: skewX(-45deg);
+    transform-origin: 100% 100% 0;
+}
+.testimonial .pic{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+.testimonial .pic img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+.testimonial .title{
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1f479c;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+.owl-theme .owl-controls{
+    margin-top: 30px;
+}
+.owl-theme .owl-controls .owl-page span{
+    width: 15px;
+    height: 10px;
+    border-radius: 0;
+    background: #ff5a5f;
+    opacity: 0.8;
+    transition: all 0.3s ease 0s;
+}
+.owl-theme .owl-controls .owl-page.active span{
+    width: 35px;
+    background:  #1f479c;
+}
+
+/* testimonialas css ends */
+
+/* counter section starts */
+.counter-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-bottom: 40px;
+}
+.bg-light-grey {
+    background-color: #1f479c;
+    background-image: linear-gradient(45deg, #00b78b96, #1f479c), url(../images/line.png);
+}
+.counter-section .counter-item-wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.counter-item {
+    border-right: 1px solid rgb(255 255 255);
+    padding: 0 10px;
+    text-align: center;
+}
+.counter-item i {
+    color: #fff;
+    font-size: 58px;
+    display: block;
+    margin-bottom: 15px;
+}
+.counter-item .counter-no {
+    color: #fff;
+    font-family: "Lora", serif;
+    display: block;
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 1.1;
+}
+.counter-item .counter-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+
+/* counter section ends */
+/* footer section starts */
+.footer_section {
+    background-color: #000;
+    padding: 50px 0px 20px;
+    overflow: hidden;
+    position: relative;
+    background-image: linear-gradient(45deg, #00b78b9e, #02468fa1), url(../images/footer-bg01.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.single-cta {
+    display: flex;
+}
+.single-cta i {
+    color: #fff;
+    font-size: 30px;
+    float: left;
+    margin-top: 8px;
+}
+.cta-text {
+    padding-left: 15px;
+    display: inline-block;
+}
+.cta-text h4 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+.cta-text span {
+    color: #fff;
+    font-size: 16px;
+}
+.foot_row_line {
+    border-top: 1px solid #fff;
+    margin: 15px 0px 15px 0px;
+}
+.foot_lg img {
+    width: 46%;
+}
+.foot_lg img {
+    margin-bottom: 12px;
+    /* width: 100%; */
+}
+.foot_links h3 {
+    font-size: 25px;
+    position: relative;
+    color: #e2e2e2;
+}
+.foot_links h3::after {
+    position: absolute;
+    content: '';
+    bottom: -10px;
+    left: 0px;
+    background-color: #ff6600;
+    width: 65px;
+    height: 2px;
+    border-radius: 20px;
+}
+.foot_links_uls {
+    display: flex;
+}
+.foot_links ul {
+    padding: 0px;
+}
+.foot_links ul li {
+    margin: 12px 0px;
+    list-style-type: none;
+}
+.foot_links ul li a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s ease;
+    font-weight: 400;
+}
+.foot_links_uls_right {
+    margin-left: 30px;
+}
+.foot_map h3 {
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 22px;
+    position: relative;
+}
+.social_icons {
+    margin-top: 10px;
+    display: flex;
+}
+.social_icons li {
+    list-style-type: none;
+}
+.social_icons a {
+    color: #fff;
+    text-decoration: none;
+}
+.social_icons i {
+    float: left;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    margin-right: 5px;
+    width: 40px;
+    background-color: #00b78b;
+    height: 40px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.cta-text a{
+    text-decoration: none;
+}
+.footer_right {
+    width: 100%;
+    border-top: 1px solid #eaeaea45;
+    background-color: rgb(0, 0, 0);
+}
+.footerbottom1 h5 {
+    font-size: 17px;
+    margin-top: 18px;
+    color: #fff;
+}
+.footerbottom2 {
+    float: right !important;
+    margin-top: 8px;
+}
+.footerbottom2 h4 {
+    font-size: 17px;
+    color: #fff;
+    margin-top: 12px;
+}
+.svapps_ft_logo {
+    width: 75px;
+    margin-top: -16px
+}
+.foot_lg p{
+    color: #fff;
+}
+/* footer css ends */
+
+
+
+.scrollToTop {
+        background-image: linear-gradient(to right, #e46a25 52%, #e46a25 100%, #e56a26 100%);
+}
+.scrollToTop {
+    background-size: 200% auto;
+    box-shadow: 0 7px 30px rgba(0, 0, 0, 0.3);
+    bottom: 15px;
+    display: none;
+    border-radius: 50%;
+    height: 50px;
+    padding: 2px;
+    position: fixed;
+    right: 15px;
+    text-align: center;
+    text-decoration: none;
+    width: 50px;
+    z-index: 99999;
+    opacity: 0.8;
+}
+.scrollToTop i {
+    color: #fff;
+    font-size: 42px;
+}
+.foot_lg li{
+    list-style-type: none;
+}
+
+/* footer section ends */
+@media only screen and (max-width: 1500px){
+.features-item-wrap {
+    padding-bottom: 70px;
+    padding-left: 0;
+    padding-right: 0;
+}
+}
+@media only screen and (max-width: 1199px){
+.features-image {
+    display: none;
+}
+.bg-text {
+    font-size: 150px;
+}
+.amenities-detail {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.amenities-detail .amenities-box {
+    width: 100%;
+    padding: 24px;
+}
+.amenities-detail .amenities-box img {
+    border-radius: 15px;
+}
+.amenities-detail .amenities-box:last-child {
+    padding-top: 0;
+}
+.amenities-detail .amenities-box {
+    width: 100%;
+    padding: 24px;
+}
+.amenities-detail .amenities-box .lh-amenities-in {
+    padding: 0;
+}
+.amenities-detail .amenities-box .lh-amenities-in h4.side-number {
+    top: 0;
+    right: 0;
+}
+.amenities-detail .amenities-box .lh-amenities-in .amenities-contain h4.amenities-heading {
+    font-size: 18px;
+}
+
+}
+@media only screen and (max-width: 991px){
+    .footerbottom1{
+        text-align: center;
+    }
+    .footerbottom2 {
+        float: none !important;
+        margin-top: 8px;
+        text-align: center !important;
+    }
+}
+@media only screen and (max-width: 767px){
+    .about-desc > span:not(.about-time) + h2 {
+        margin-top: 1.25rem;
+        font-size: 25px;
+        line-height: 35px;
+    }    
+    .mvw{
+        display: none;
+    }
+    .right-top {
+        text-align: right;
+        margin-right: 0px;
+        margin-top: -26px;
+    }
+.bg-text {
+    font-size: 100px;
+}
+.section-title h2 {
+    font-size: 35px;
+}
+.feature-item {
+    width: 100%;
+}
+.pl-80 {
+    padding-left: 0px;
+}
+}
+
+@media only screen and (max-width: 575px){
+.counter-section .counter-item-wrap {
+    grid-template-columns: repeat(2, 1fr);
+}
+.counter-item {
+    padding: 15px 10px;
+    border-right: 1px solid rgba(34, 113, 177, 0.25);
+    border-bottom: 1px solid rgba(34, 113, 177, 0.25);
+}
+.counter-item i {
+    font-size: 25px;
+}
+.counter-item .counter-no {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.counter-item .counter-text {
+    font-size: 13px;
+}
+.reatures-leaf {
+    display: none;
+}
+.pbmit-slider-content {
+    background-color: #04bdaf8f;
+    padding: 40px 0px;
+    width: auto;
+}
+}
+.section-title h2{
+    color: #1f479c;
+    font-weight: 600;
+}
+</style>
+</head>
+
+<body>
+
+    <!-- top heder start here -->
+    <div class="topmenu">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xs-6">
+                    <div class="left-top">
+                        <p>
+                            <a href="tel:91 9999999999"><span><i class="fa fa-phone"></i> +91 9999999999</span>
+                                &nbsp;</a>
+                            <a href="mailto:info@gmail.com"><span class="mvw"><i class="fa fa-envelope"></i>
+                                    info@gmail.com</span></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-6">
+                    <div class="right-top">
+                        <a href="#" target="__blank"><span class="fa fa-facebook"></span></a>
+                        <!-- <a href="" target="__blank"><span class="fa fa-twitter"></span></a> -->
+                        <a href="#" target="__blank"><span class="fa fa-twitter"></span></a>
+                        <a href="#" target="__blank"><span class="fa fa-instagram"></span></a>
+                        <a href="#" target="__blank"><span class="fa fa-linkedin"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- top header end here -->
+
+    <!-- page wrapper -->
+    <div class="page-wrapper pbmit-bg-color-light">
+
+        <!-- Header Main Area -->
+        <header class="site-header header-style-2">
+            <div class="container">
+                <div class="pbmit-header-content d-flex justify-content-between align-items-center">
+                    <div class="pbmit-logo-menuarea d-flex align-items-center">
+                        <div class="site-branding">
+                            <h1 class="site-title">
+                                <a href="index.html">
+                                    <img class="pbmit-sticky-logo" src="assets/images/logo.png" alt="Yoge">
+                                </a>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="site-navigation">
+                            <nav class="main-menu navbar-expand-xl navbar-light">
+                                <div class="navbar-header">
+                                    <!-- Toggle Button -->
+                                    <button class="navbar-toggler" type="button">
+                                        <i class="fa fa-bars"></i>
+                                    </button>
+                                </div>
+                                <div class="pbmit-mobile-menu-bg"></div>
+                                <div class="collapse navbar-collapse clearfix show" id="pbmit-menu">
+                                    <div class="pbmit-menu-wrap">
+                                        <span class="closepanel">
+                                            <svg class="qodef-svg--close qodef-m" xmlns="http://www.w3.org/2000/svg"
+                                                width="20.163" height="20.163" viewBox="0 0 26.163 26.163">
+                                                <rect width="36" height="1" transform="translate(0.707) rotate(45)">
+                                                </rect>
+                                                <rect width="36" height="1" transform="translate(0 25.456) rotate(-45)">
+                                                </rect>
+                                            </svg>
+                                        </span>
+                                        <ul class="navigation clearfix">
+                                            <li class="active"><a href="index.html">Home</a></li>
+                                                <li class="dropdown">
+                                                    <a href="#">About Clinfomed</a>
+                                                    <ul>
+                                                        <li><a href="#">About</a></li>
+                                                        <li><a href="#">Leadership</a></li>
+                                                        <li><a href="#">Partnerships</a></li>
+                                                        <li><a href="#">Our SEG/DEI Commitment</a></li>
+                                                    </ul>
+                                                </li>
+                                            <li class="dropdown">
+                                                <a href="#">Solutions</a>
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">Solutions Overview</a>
+                                                    </li>
+                                                    <li class="dropdown">
+                                                        <a href="#">Biometrics</a>
+                                                        <ul>
+                                                            <li><a href="#">Biostatistics</a></li>
+                                                            <li><a href="#">Statistical Programming</a></li>
+                                                            <li><a href="#">Data Management</a></li>
+                                                            <li><a href="#">CDISC eSubmission</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown">
+                                                        <a href="#">Clinical Operations</a>
+                                                        <ul>
+                                                            <li><a href="#">Project Management</a></li>
+                                                            <li><a href="#">Clinical Monitoring</a></li>
+                                                            <li><a href="#">Site Startup</a></li>
+                                                            <li><a href="#">Site Service</a></li>
+                                                            <li><a href="#">SMO</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown">
+                                                        <a href="#">Drug Safety</a>
+                                                        <ul>
+                                                            <li><a href="#">Case Processing</a></li>
+                                                            <li><a href="#">Aggregate Report Development and Submission</a></li>
+                                                            <li><a href="#">Signal Management</a></li>
+                                                            <li><a href="#">Literature Monitoring</a></li>
+                                                            <li><a href="#">Risk Evaluation & Mitigation</a></li>
+                                                            <li><a href="#">Safety Data Exchange Agreements</a></li>
+                                                            <li><a href="#">Pharmacovigilance System Master File (PSMF) Management</a></li>
+                                                            <li><a href="#">Medical Information Call Center (MICC) Solutions</a></li>
+                                                            <li><a href="#">Local Safety Officer (LSO) Services</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown">
+                                                        <a href="#">Medical Device Safety</a>
+                                                        <ul>
+                                                            <li><a href="#">Medical Device Call Center</a></li>
+                                                            <li><a href="#">Literature Monitoringw</a></li>
+                                                            <li><a href="#">Incident Reporting</a></li>
+                                                            <li><a href="#">Medical Writing</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown">
+                                                        <a href="#">Regulatory Affairs</a>
+                                                        <ul>
+                                                            <li><a href="#">Market Intelligence and Strategy</a></li>
+                                                            <li><a href="#">Electronic Submissions Publishing</a></li>
+                                                            <li><a href="#">SPL Conversion Services</a></li>
+                                                            <li><a href="#">Global Regulatory CMC Services</a></li>
+                                                            <li><a href="#">Company Core Data Sheet Management Services</a></li>
+                                                            <li><a href="#">Labeling and Artwork Management</a></li>
+                                                            <li><a href="#">Legal Entity Alignment</a></li>
+                                                            <li><a href="#">Regulatory Information Management</a></li>
+                                                            <li><a href="#">Document Management</a></li>
+                                                            <li><a href="#">Product Registration Support</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown">
+                                                        <a href="#">Medical Device Regulatory Affairs</a>
+                                                        <ul>
+                                                            <li><a href="#">Regulatory Intelligence</a></li>
+                                                            <li><a href="#">Regulatory Compliance</a></li>
+                                                            <li><a href="#">Regulatory Strategy</a></li>
+                                                            <li><a href="#">Registration Support</a></li>
+                                                            <li><a href="#">Technical Document Submission & Approval Preparation</a></li>
+                                                            <li><a href="#">Artwork & Labeling Services</a></li>
+                                                            <li><a href="#">Copy Review Development</a></li>
+                                                            <li><a href="#">Change Control Management</a></li>
+                                                            <li><a href="#">Publishing</a></li>
+                                                            <li><a href="#">EUDAMED Support</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Medical Affairs</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Medical Writing</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Pharmacology & Toxicology</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Quality & Compliance</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Technology</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Scientific & Strategic Consulting</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a href="#">Therapeutic Areas</a>
+                                                <ul>
+                                                    <li><a href="#">Therapeutic Areas Overview</a></li>
+                                                    <li><a href="#">Anti-Infective</a></li>
+                                                    <li><a href="#">Autoimmune Diseases</a></li>
+                                                    <li><a href="#">COVID-19</a></li>
+                                                    <li><a href="#">Metabolic</a></li>
+                                                    <li><a href="#">Musculoskeletal</a></li>
+                                                    <li><a href="#">Neurology</a></li>
+                                                    <li><a href="#">Oncology</a></li>
+                                                    <li><a href="#">Ophthalmology</a></li>
+                                                    <li><a href="#">Rare Disease</a></li>
+                                                    <li><a href="#">Respiratory</a></li>
+                                                    <li><a href="#">Urology</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="dropdown">
+                                                <a href="#">Expertise</a>
+                                                <ul>
+                                                    <li><a href="#">Overview</a></li>
+                                                    <li><a href="#">Early Development</a></li>
+                                                    <li><a href="#">Phase II-IV Clinical Trials</a></li>
+                                                    <li><a href="#">Real-World Evidence</a></li>
+                                                    <li><a href="#">Vaccines</a></li>
+                                                    <li><a href="#">Medical Devices</a></li>
+                                                    <li><a href="#">Consumer Products</a></li>
+                                                    <li><a href="#">Natural Products</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="dropdown">
+                                                <a href="#">Resources</a>
+                                                <ul>
+                                                    <li><a href="#">Resources</a></li>
+                                                    <li><a href="#">Regulatory Intelligence</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Careers</a>
+                                            </li class="dropdown">
+                                            <li><a href="#">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="pbmit-right-box d-flex align-items-center">
+                        <!--<div class="pbmit-button-box">-->
+                        <!--    <div class="pbmit-header-button">-->
+                        <!--        <a href="tel:+1(212)255-511">-->
+                        <!--            <span class="pbmit-header-button-text-1">+1(212)255-511</span>-->
+                        <!--        </a>-->
+                        <!--    </div>-->
+                        <!--</div>-->
+                        <!--<div class="pbmit-header-search-btn">-->
+                        <!--    <a href="#" title="Search">-->
+                        <!--        <i class="pbmit-base-icon-search-1"></i>-->
+                        <!--    </a>-->
+                        <!--</div>-->
+                        <div class="pbmit-button-box-second">
+                            <a class="pbmit-btn" href="#">
+                                <span class="pbmit-button-content-wrapper">
+                                    <span class="pbmit-button-icon pbmit-align-icon-right">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22.76" height="22.76"
+                                            viewBox="0 0 22.76 22.76">
+                                            <title>black-arrow</title>
+                                            <path
+                                                d="M22.34,1A14.67,14.67,0,0,1,12,5.3,14.6,14.6,0,0,1,6.08,4.06,14.68,14.68,0,0,1,1.59,1"
+                                                transform="translate(-0.29 -0.29)" fill="none" stroke="#000"
+                                                stroke-width="2"></path>
+                                            <path d="M22.34,1a14.67,14.67,0,0,0,0,20.75"
+                                                transform="translate(-0.29 -0.29)" fill="none" stroke="#000"
+                                                stroke-width="2"></path>
+                                            <path d="M22.34,1,1,22.34" transform="translate(-0.29 -0.29)" fill="none"
+                                                stroke="#000" stroke-width="2"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="pbmit-button-text">Submit RFI/RFP</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </header>
+        <!-- Header Main Area End Here -->
+
+        <!-- about us section starts-->
+      
+        <!-- about us section ends -->
+
+
+        <!-- services section starts -->
+
+    
+        <!-- services section ends -->
+
+        <!-- book_appointment section starts -->
+  
+        <!-- book_appointment section ends -->
+
+   
+
+        <!-- counter section starts -->
+
+        
+		
+    <!-- jQuery JS -->
+   
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+   
+    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/bootsnav.js"></script> -->
+  </body>
+</html>
