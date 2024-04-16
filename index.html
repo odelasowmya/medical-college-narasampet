@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NPMC</title>
+    <link rel="icon" href="assets/img/npmc-fav.jpg" type="image/png" sizes="18x18">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link  rel="stylesheet" href="./assets/css/style.css"/>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
+    <link rel="stylesheet" href=""> <!-- Ensure this link is correct -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style5.css">
+    <link rel="stylesheet" href="./assets/css/style10.css">
+
+
+    <title>Hello, world!</title>
+
+    <style>
+      .swiper-container {
+        width: 100%;
+    }
+    .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+    .swiper-slide {
+        background-size: cover;
+        background-position: 50%;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .swiper-pagination-bullet {
+        background-color: transparent;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+    }
+    
+    .swiper-pagination-bullet-active {
+        background-color: #fff;
+    }
+    
+    .swiper-button-container {
+        background-color: rgba(0,0,0,.25);
+    }
+    
+    .swiper-button-prev {
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+    }
+    
+    .swiper-button-next {
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+    }
+    
+    /* GENERIC STUFF TO MAKE IT POP 💩 */
+    
+    .swiper-slide:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: .4;
+    }
+    
+    .swiper-slide h2 {
+        pointer-events: none;
+        opacity: 0;
+        color: #ffffff;
+        font-size: calc(5vw);
+        letter-spacing: -1px;
+        transform: translateY(-5%) scale(.8);
+        transition: 1s ease;
+        text-transform: uppercase;
+        text-shadow: 0 5px 5px rgba(0,0,0, .01);
+    }
+    
+    .swiper-slide-active h2 {
+        opacity: 1;
+        transform: translateY(0%) scale(1);
+        transition: 1s ease;
+    }
+
+    /* cards section */
+
+    .cards{
+      border: 1px solid white;
+      border-radius: 10px;
+      background-color:antiquewhite;
+      padding: 5px;
+    }
+    .imgpart{
+      border-bottom: 5px solid red;
+    }
+    .textpart{
+      padding: 10px;
+    }
+    .img1{
+      border-radius: 10px 10px 0 0;
+    }
+    
+    
+    
+    </style>
+</head>
+<body style="overflow-x: hidden !important;">
+  <div>
+    <div class="topmenu navbar_bgcolor" style="border-bottom: 2px solid #0ba3a7;background: #0ba3a7;">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-xs-6">
+            <div class="left-top">
+             
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-xs-6">
+            <div class="left-top">
+              <p>
+                <a href="tel:919999999999"><span><i class="fa fa-phone"></i> +91 123456789</span>
+                  &nbsp;</a>
+                <a href="#"><span class="mvw"><i class="fa fa-envelope"></i>
+                    info@gmail.com</span></a>
+              </p>
+            </div>
+          </div>
+          <!-- <div class="col-sm-12 col-md-6 col-xs-6">
+            <div class="right-top">
+              <a href="#" target="__blank" class="ms-2"><span class="fa fa-facebook"></span></a>
+              <a href="#" target="__blank" class="ms-2"><span class="fa fa-twitter"></span></a>
+              <a href="#" target="__blank" class="ms-2"><span class="fa fa-instagram"></span></a>
+              <a href="#" target="__blank" class="ms-2"><span class="fa fa-linkedin"></span></a>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  <div style="border-bottom: 1px solid #0ba3a7;">    <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-7 ">
+      <div class="flex1" >
+        <a class="navbar-brand  " href="index.html" style="width: 158px !important; margin-right: 15px !important;">
+          <img src="./assets/img/logo.png" alt="" width="100" style="width: 100%;"></a>
+       <div class="">
+        <h2 class="text-capitalize colg_head"> GOVERNMENT MEDICAL COLLEGE NARSAMPET</h2>
+       </div>
+       <a class="navbar-brand" style="display: none;" href="index.html" style="width: 158px !important; margin-right: 3px !important;">
+        <img src="./assets/img/logo.png" alt="" width="100" style="width: 100%;"></a>
+      
+      </div> 
+      </div>
+      <div class="col-sm-12 col-md-5 hideinlarge" >
+        <div class="flex1  justify-content-around" >
+          <div class="rta-but">
+            <a class=" btn-submit" style="border-radius: 19px;padding: 8px 13px;text-wrap: nowrap;"><strong>RTA ACT</strong></a>
+  
+           </div>
+           <div class="">
+            <a class=" btn-submit" style="border-radius: 19px;padding: 8px 13px;text-wrap: nowrap;"><strong>Attendance Portal</strong></a>
+  
+           </div>
+          <a class="navbar-brand" href="index.html" style="width: 158px !important; margin-right: 15px !important;width: 158px !important;
+          /* margin-right: 15px !important; */
+          display: flex;
+          justify-content: flex-end;">
+           <img src="./assets/img/government_logo.png" alt="" width="76%" class="govt_logo"></a>
+       
+      
+        </div> 
+        </div>
+        
+     
+      <!-- <div class="col-sm-12 col-md-5">
+        <div class="flex1">
+          <div>
+            <a class=" btn-submit"><strong>Read More</strong></a>
+          </div>
+          <div class="">
+          <a class="navbar-brand" href="index.html" >
+            <img src="./assets/img/government_logo.png" alt="" width="76%" style="width: 76%;"></a>
+
+          </div>
+       
+      </div>
+      </div> -->
+
+    </div>
+
+  </div>
+</div>
+<div style="background-color: #0ba3a7; ">
+  <div class="container p-0">
+      <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid flex_navicon-2  p-0 ">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #fff;">
+                  <span class="navbar-toggler-icon" style="color: #0ba3a7 !important;"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav">
+                      <li class="nav-item dropdown">
+                          <a class="nav-link  " href="#" id="navbarDropdownMenuLink" role="button" aria-expanded="false">Home</a>
+                          
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link  " href="#" id="navbarDropdownMenuLink" role="button" aria-expanded="false" style="text-wrap: nowrap;">About Us</a>
+                        <ul class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">MCNP</a></li>
+                          <li><a class="dropdown-item" href="#">College Information</a></li>
+                          <li><a class="dropdown-item" href="#">Departments Heads</a></li>
+
+                         <!-- Demo header-->
+<!-- <section class="header">
+  <div class="container p-0">
+      
+
+
+ <div class="row">
+          <div class="col-md-3">
+           
+              <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  <a class="nav-link mb-3 p-3 shadow active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                      <i class="fa fa-user-circle-o mr-2"></i>
+                      <span class="font-weight-bold small text-uppercase">Personal information</span></a>
+
+                  <a class="nav-link mb-3 p-3 shadow" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                      <i class="fa fa-calendar-minus-o mr-2"></i>
+                      <span class="font-weight-bold small text-uppercase">Bookings</span></a>
+
+                  <a class="nav-link mb-3 p-3 shadow" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                      <i class="fa fa-star mr-2"></i>
+                      <span class="font-weight-bold small text-uppercase">Reviews</span></a>
+
+                  <a class="nav-link mb-3 p-3 shadow" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+                      <i class="fa fa-check mr-2"></i>
+                      <span class="font-weight-bold small text-uppercase">Confirm booking</span></a>
+                  </div>
+          </div>
+
+
+          <div class="col-md-9">
+           
+              <div class="tab-content" id="v-pills-tabContent">
+                  <div class="tab-pane fade shadow rounded bg-white show active " id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                      <h4 class="font-italic mb-4">Personal information</h4>
+                      <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                  
+                  <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                      <h4 class="font-italic mb-4">Bookings</h4>
+                      <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                  
+                  <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                      <h4 class="font-italic mb-4">Reviews</h4>
+                      <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                  
+                  <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                      <h4 class="font-italic mb-4">Confirm booking</h4>
+                      <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section> -->
+
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link  " href="#" id="" role="button" aria-expanded="false">Academics</a>
+                      <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">Student Section</a></li>
+                          <li><a class="dropdown-item" href="#">Submenu Item 2</a></li>
+                          Add more submenu items as needed
+                      </ul> -->
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link  " href="#" id="" role="button" aria-expanded="false">Departments</a>
+                    <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Submenu Item 1</a></li>
+                        <li><a class="dropdown-item" href="#">Submenu Item 2</a></li>
+                        Add more submenu items as needed
+                    </ul> -->
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link  " href="#" id="" role="button" aria-expanded="false">Admissions</a>
+                  <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">Submenu Item 1</a></li>
+                      <li><a class="dropdown-item" href="#">Submenu Item 2</a></li>
+                      Add more submenu items as needed
+                  </ul> -->
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link  " href="#" id="" role="button" aria-expanded="false">Faculty</a>
+                <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Submenu Item 1</a></li>
+                    <li><a class="dropdown-item" href="#">Submenu Item 2</a></li>
+                    Add more submenu items as needed
+                </ul> -->
+            </li>
+                      <!-- Add more navbar items with dropdowns as needed -->
+                      <li class="nav-item dropdown">
+                          <a class="nav-link " href="#" id="" role="button" aria-expanded="false">Committes</a>
+                          <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                              <li><a class="dropdown-item" href="#">Submenu Item 1</a></li>
+                              <li><a class="dropdown-item" href="#">Submenu Item 2</a></li>
+                              Add more submenu items as needed
+                          </ul> -->
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link  " href="#" id="" role="button" aria-expanded="false">Committes</a>
+                        <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                            <li><a class="dropdown-item" href="#">Submenu Item 1</a></li>
+                            <li><a class="dropdown-item" href="#">Submenu Item 2</a></li>
+                            Add more submenu items as needed
+                        </ul> -->
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link  " href="#" id="navbarDropdownMenuLink2" role="button" aria-expanded="false">Gallery</a>
+                     
+                    </li>
+                 
+                  
+                  <li class="nav-item dropdown">
+                    <a class="nav-link  " href="#" id="navbarDropdownMenuLink2" role="button" aria-expanded="false">Citizens Charter</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                        <li><a class="dropdown-item" href="#">Submenu Item 1</a></li>
+                        <li><a class="dropdown-item" href="#">Submenu Item 2</a></li>
+                        <!-- Add more submenu items as needed -->
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link  " href="#" id="navbarDropdownMenuLink2" role="button" aria-expanded="false">Contact Us</a>
+                  
+                  </li>
+                
+                      <!-- Repeat the above structure for other navbar items -->
+                  </ul>
+              </div>
+          </div>
+      </nav>
+  </div>
+</div>
+
+<!-- <div style="background-color: #0ba3a7;">
+  <div class="container ">
+      <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid flex_navicon-2">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #fff;">
+                  <span class="navbar-toggler-icon" style="color: #0ba3a7 !important;"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav">
+                      <li class="nav-item dropdown">
+                          <a class="nav-link active " href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                              <li><a class="dropdown-item" href="#">Submenu Item 1</a></li>
+                              <li><a class="dropdown-item" href="#">Submenu Item 2</a></li>
+                            
+                          </ul>
+                      </li>
+                    
+                      <li class="nav-item dropdown">
+                          <a class="nav-link active " href="#" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                              <li><a class="dropdown-item" href="#">Submenu Item 1</a></li>
+                              <li><a class="dropdown-item" href="#">Submenu Item 2</a></li>
+                            
+                          </ul>
+                      </li>
+                      
+                  </ul>
+              </div>
+          </div>
+      </nav>
+  </div>
+</div> -->
+
+   <!-- <div style="background-color: #0ba3a7;">
+    <div class="container ">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid flex_navicon-2">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #fff;">
+            <span class="navbar-toggler-icon" style="color: #0ba3a7 !important;"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Academics</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Departments</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Admissions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Faculty</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Committes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">RTI ACT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Citizens Charter</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Attendance Portal</a>
+              </li>
+            
+            </ul>
+          </div>
+        </div>
+      </nav>
+     </div>
+   </div> -->
+  </div>
+    <!-- Your HTML content -->
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url(./assets/img/libraries.jpg);">
+                <h2>LIBRARIES</h2>
+            </div>
+            <div class="swiper-slide" style="background-image: url(./assets/img/INFRA.jpg);">
+                <h2>OUR CLASSROOMS</h2>
+            </div>
+            <div class="swiper-slide" style="background-image: url(./assets/img/LAB.jpg);">
+                <h2>OUR PRACTICALS</h2>
+            </div>
+            <div class="swiper-slide" style="background-image: url(./assets/img/GRADUATION.jpg);">
+              <h2>OUR GRADUATION DAY </h2>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="marque-sec"   style="background-color: #0ba3a7;">
+      <h4 class="width-25">Updates</h4>
+      <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();" class="w-75">
+          
+                <span><a href="notification.html" target="_blank"   previewlistener="true">
+            <!-- <i class="fa fa-angle-double-right"></i> -->
+            <img src="./assets/img/gif.gif" align="center">
+           Walk in interview for Teaching Faculty on contract basis on 06-04-2024  (Time: 10:30 AM to 4:00 PM)</a>
+        </span>
+  
+        <!--<span><a href="./assets/images/pdf/GMC-BHPL _MBBS-ADMISSION-GUIDELINES-2023-24.pdf" target="_blank">-->
+        <!--     <i class="fa fa-angle-double-right"></i> -->
+        <!--   GMC - Jayashankar Bhupalpally MBBS - Admission-Guidelines-2023-24</a>-->
+        <!--</span>-->
+        
+      </marquee>
+     
+    </div>
+<div class="container mt-30  ">
+  <div class="row">
+  <div class="col-sm-12 col-md-12 col-lg-7">
+
+<div class=""  data-aos="zoom-in">
+  <h3 class="acadamic_para heading_top d-flex align-center">
+    WELCOME TO MEDICAL COLLEGE NARASAMPET
+    </h3>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <p class="font-14"  data-aos="zoom-in">wLorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cum nesciunt quis ex, assumenda quam perferendis 
+      minima doloremque voluptate, deleniti laudantium porro earum reprehenderit hic dolor. Cupiditate, qui? Odio rerum maxime
+      tenetur excepturi sit. Quisquam, atque debitis saepe hic aliquid fuga, qui quos cupiditate nihil rem reiciendis dignissimos quasi quis!</p>
+       
+  </div>
+  <div class="col-md-6"  data-aos="zoom-in">
+    <p class="font-14">wLorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cum nesciunt quis ex, assumenda quam perferendis 
+      minima doloremque voluptate, deleniti laudantium porro earum reprehenderit hic dolor. Cupiditate, qui? Odio rerum maxime
+      tenetur excepturi sit. Quisquam, atque debitis saepe hic aliquid fuga, qui quos cupiditate nihil rem reiciendis dignissimos quasi quis!</p>
+     
+  </div>
+</div>
+
+    <div class="mt-1 mb-1 d-flex justify-content-start"  data-aos="zoom-in">
+      <a class=" btn-submit"><strong>Read More</strong></a>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-12 col-lg-5"  style="overflow-x: hidden !important;">
+<div class="p-1 bg_img"  style="overflow-x: hidden !important;">
+  <!-- <img src="https://vellorecmc.org/wp-content/uploads/2020/08/student-exchange-photo.jpg" width="100%" height="auto" alt="" data-aos="fade-left" style="overflow-x: hidden;"> -->
+  <img src="./assets/img/abtus.jpg" width="100%" height="auto" alt="" data-aos="fade-left" style="overflow-x: hidden;">
+
+</div>
+  </div>
+  <div class="col-md-12">
+  
+   
+  </div>
+  
+</div>
+
+
+</div>  
+<div class="section1 mt-30">
+  <div class="container">
+    <div class="bgforcard hideinlarge">
+    <div class="padding5">
+      <div class="row" >
+        <!-- <div class="col-sm-12  col-md-1"></div> -->
+        <div class="col-sm-12 col-md-5">
+          <div class="box-part1">
+             <h1 data-aos="zoom-in-up">ACADEMIC SPOTLIGHT</h1>
+             <p data-aos="zoom-in-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cum nesciunt quis ex, assumenda.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cum nesciunt quis ex, assumenda.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cum nesciunt quis ex, assumenda.
+             </p>
+             <div>
+              <a class="btn-submit"><strong>View More</strong></a>
+             </div>
+          </div>
+        </div>
+        <div class="col-sm-12  col-md-2">
+          <div data-aos="fade-left">
+          <div class="card card1">
+            <h2 class="acadamic_head1">Anatomy</h2>
+          </div>
+          <br>
+          <div class="card card4 card7 ">
+            <h2 class="acadamic_head1">
+              OPD</h2>
+          </div>
+        </div>
+        </div>
+        <div class="col-sm-12  col-md-2">
+          <div data-aos="fade-left">
+          <div class="card card2 card7 ">
+            <h2 class="acadamic_head2">Pathology</h2>
+          </div>
+          <br>
+          <div class="card card5 card7">
+            <h2 class="acadamic_head1">
+              Orthopaedics</h2>
+          </div>
+        </div>
+        </div>
+        <div class="col-sm-12  col-md-2">
+          <div data-aos="fade-left">
+          <div class="card card3 card7 ">
+            <h2 class="acadamic_head3">Microbiology</h2>
+          </div>
+          <br>
+          <div class="card card6 card7 ">
+            <h2 class="acadamic_head1">
+              Paediatrics</h2>
+          </div>
+        </div>
+        </div>
+        <div class="col-md-1"></div>
+  
+        <!-- <div class="col-sm-12  col-md-2">
+          <div data-aos="zoom-in-down">
+          <div class="card card4 card7">
+            <h2 class="acadamic_head4">
+              OPD</h2>
+          </div>
+        </div>
+      </div> -->
+        <!-- <div class="col-sm-12  col-md-2">
+          <div data-aos="zoom-in-down">
+          <div class="card card5 card7">
+            <h2 class="acadamic_head5">Orthopaedics</h2>
+          </div>
+        </div>
+      </div> -->
+        <!-- <div class="col-sm-12 col-md-2">
+          <div data-aos="zoom-in-down">
+          <div class="card card6 card7">
+            <h2 class="acadamic_head6">Paediatrics</h2>
+          </div>
+        </div>
+      </div> -->
+      <div class="col-md-1"></div>
+        
+   
+      </div>
+    </div>
+    </div>
+    <!-- display in all 320 to 768px -->
+    <div class=" hideinsmall p-2" style="background-color: #0ba3a7;">
+      <div class="container">
+        <div class="row" >
+          <!-- <div class="col-sm-12  col-md-1"></div> -->
+          <div class="col-sm-12 col-md-12 mb-2"style="background-color: #0ba3a7; color:#fff" >
+            
+               <h1 data-aos="zoom-in-up">ACADEMIC SPOTLIGHTe</h1>
+               <p data-aos="zoom-in-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cum nesciunt quis ex, assumenda.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cum nesciunt quis ex, assumenda.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cum nesciunt quis ex, assumenda.
+               </p>
+               <div class=" btn-submit">
+                <a class="btn-submit"><strong>View More</strong></a>
+               </div>
+            
+          </div>
+          <div class="col-md-4 mt-2">
+           <div class="" >
+            <div class="card w-100 " style="background-color:#eb1c24c2; height:auto;">
+              <div class="card-body">
+                <img src="./assets/img/anotomy2.jpg" alt="" width="100%">
+                <p style="text-wrap: nowrap;color: #ffff;
+                font-weight: 900;">Anotomy</p>
+              </div>
+            </div>
+           </div>
+          </div>
+           <div class="col-md-4 mt-2">
+            <div class="card  w-100 " style="background-color:#eb1c24c2; height:auto;">
+
+              <div class="card-body">
+                <img src="./assets/img/pathalogy.2jpg.jpg" alt="" width="100%">
+                <p style="text-wrap: nowrap;color: #ffff;
+                font-weight: 900;">Pathalogy</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mt-2">
+            <div class="card w-100 " style="background-color:#eb1c24c2; height:auto;">
+
+              <div class="card-body">
+                <img src="./assets/img/microbiology2.jpeg" alt="" width="100%">
+                <p style="text-wrap: nowrap;color: #ffff;
+                font-weight: 900;">Microbiology</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mt-2">
+            <div class="card w-100 " style="background-color:#eb1c24c2; height:auto;" >
+
+              <div class="card-body">
+                <img src="./assets/img/opd.jpg" alt="" width="100%">
+                <p style="text-wrap: nowrap;color: #ffff;
+                font-weight: 900;">OPD</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mt-2">
+            <div class="card w-100 " style="background-color:#eb1c24c2; height:auto;">
+              <div class="card-body">
+                <img src="./assets/img/Orthopaedics2.jpg" alt="" width="100%">
+                <p style="text-wrap: nowrap;color: #ffff;
+                font-weight: 900;">Orthopaedics</p>
+              </div>
+            </div>
+          </div>
+         
+          <div class="col-md-4 mt-2 mb-2">
+            <div class="card w-100 " style="background-color:#eb1c24c2; height:auto;">
+
+              <div class="card-body">
+                <img src="./assets/img/Paediatrics.jpg" alt="" width="100%">
+                <p style="text-wrap: nowrap;color: #ffff;
+                font-weight: 900;">Paediatrics</p>
+              </div>
+            </div>
+          </div>
+
+    
+     
+        </div>
+      </div>
+      </div>
+
+  </div>
+</div>
+
+
+<section class="mt-30">
+  <div class="register-section">
+    <div class="register-main">
+      <div class="register" >
+        <div  class="text1">
+          <h5 class="text1" data-aos="zoom-in-up"><strong>CHANGE YOUR LIFE</strong></h5>
+        </div>
+        <div>
+          <h3 class="register-heading" data-aos="zoom-in-up">Update your skills with us !</h3>
+        </div>
+        <div>
+          <a href="#" data-aos="zoom-in-up">   <strong> <button class="register-button btn-submit"> Register Now</button></strong>
+          </a>
+        </div>
+       </div>
+    </div>
+    <div class="overlay"></div>
+
+  
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+  <section class="mt-30 mb-30">
+    <div class="bg-container" id="cardSection">
+      <div class="container mb-30">
+        <div class="footerBannerHeader">
+            <h2 class="footerBannerTitle acadamic_para">Excellence In Education</h2>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+         
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="dell-part">
+              <img src="./assets/img/learning 516 x 387.jpg" alt="" width="100%">
+
+            </div>
+            <div class="mark-part" data-aos="zoom-in"data-aos-easing="linear"
+            data-aos-duration="500">
+              <h2>Learning</h2>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut quasi architecto ducimus distinctio ipsum quibusdam nesciunt dolor ad commodi nihil.</p>
+              <div>
+                <a href="#">   <strong> <button class="register-button btn-submit">view more</button></strong>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="dell-part dem">
+              <img src="./assets/img/labtesting 516 x 387.jpg" alt="" width="100%">
+
+            </div>
+            <div class="mark-part"data-aos="zoom-in"data-aos-easing="linear"
+            data-aos-duration="800">
+              <h2>Lab</h2>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut quasi architecto ducimus distinctio ipsum quibusdam nesciunt dolor ad commodi nihil.</p>
+              
+              <div>
+                <a href="#">   <strong> <button class="register-button btn-submit">view more</button></strong>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="dell-part sem">
+              <img src="./assets/img/practice 516 x 387.jpg" alt="" width="100%">
+
+            </div>
+            <div class="mark-part"data-aos="zoom-in" data-aos-easing="linear"
+            data-aos-duration="1500">
+              <h2>Practice</h2>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut quasi architecto ducimus distinctio ipsum quibusdam nesciunt dolor ad commodi nihil.</p>
+              
+              <div>
+                <a href="#">   <strong> <button class="register-button btn-submit button4">view more</button></strong>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="mt-30">
+    <div class="register-section2">
+      <div class="register-main2">
+        <div class="text4 height_img" style="    background: #fff;
+        padding: 15px;">
+          <h4 style="color: #0e51b5;"><span class="icon-bullhorn"></span> &nbsp; NOTICE BOARD</h4>
+          <hr>
+          <ul class="left-ul font-sm" id="note-ul">
+              
+            <li class="mt-2"><a href="#" target="_blank">
+              <img src="./assets/img/gif.gif" align="center">&nbsp;<span style="color: #0ba3a7;"> NMC-Jayashankar Narsamper MBBS- Admission-Guidelines-2024-24</span>
+              </a></li>
+              
+              
+            <li class="mt-2"><a href="./assets/images/pdf/Required_documents_list_for_admission (2).pdf" target="_blank">
+              <img src="./assets/img/gif.gif" align="center">&nbsp; <span style="color: #0ba3a7;">Required Documents List for Admission 2024-25</span>
+              </a></li>
+
+            <li class="mt-2"><a href="./assets/images/pdf/Guidelines_for_Ragging.pdf" target="_blank"><img src="./assets/img/gif.gif" align="center">&nbsp;
+              <span style="color: #0ba3a7;"> Guidelines, Rules &amp; Regulations for Prevention and Prohibition of Ragging
+            </span></a>
+          </li>
+          <li class="mt-2"><a href="./assets/images/pdf/Guidelines_for_Ragging.pdf" target="_blank"><img src="./assets/img/gif.gif" align="center">&nbsp;
+            <span style="color: #0ba3a7;"> Guidelines, Rules &amp; Regulations for Prevention and Prohibition of Ragging
+          </span></a>
+        </li>
+       
+
+     
+
+          </ul>
+        </div>
+      
+      </div>
+      <div class="overlay"></div>
+  
+    
+  
+    </div>
+  </section>
+  
+
+<section  class="alvernoReadyForNext content-style mt-30"  aria-labelledby="templates-92UTHTBJ-title">
+  <div class=" mainContentArea">
+    <div class="container">
+      <div class="footerBannerHeader">
+          <h2 class="footerBannerTitle acadamic_para" >Ready for what's next</h2>
+      </div>
+    </div>
+      <!-- <div class="footerBannerBody">
+          <div class="nineSixty">
+              <nav >
+                  <ul>
+                      <li>
+                          <div class="btn btnRounded btnPrimary">
+                              <a href="" template="default" class="medium"><span class="btnWrap">Request More Info</span></a>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="btn btnRounded btnSecondary">
+                              <a href="https://www.alverno.edu/apply" template="default" class="medium"><span class="btnWrap">Apply Now</span></a>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="btn btnRounded btnPrimary">
+                              <a href="/programs-list" template="default" class="medium"><span class="btnWrap">Explore Programs</span></a>
+                          </div>
+                      </li>
+                  </ul>
+              </nav>
+          </div>
+      </div>
+  </div> -->
+  <div class="footerBannerBody" >
+    <div>
+      <button class="button3 btn-submit">request more info</button>
+    </div>
+    <div>
+      <button class="button2 ">apply now</button>
+    </div>
+    <div>
+      <button class="button3 btn-submit">explore programs</button>
+    </div>
+  </div>
+
+
+  
+
+
+  <div class="subfooter mb-3">
+    <!-- <img src="./assets/img/footerup.png" alt="" width="100%"></div> -->
+
+</section>
+<section style="background-color: #f5f5f5" class="space-section mt-30  " id="record">
+  <div class="container clearfix">
+  <div class="text-center">
+  <h3 class="heading__title" style="text-align: center">
+    MEDICAL COLLEGE NARASAMPET
+  </h3>
+  <div class="heading-after-slider" style="padding-bottom: 20px; font-size: 16px">
+  MC has collaborated with top companies to provide industry oriented
+  programme.
+  </div>
+  <div class="row col-md-12 d-flex justify-content-center mb-50 logo-ranking">
+  <div class="col-md-2 col-sm-2 pa10">
+  <div class="grid-outer">
+  <img src="./assets/img/logo-1.jpg" class=" img-responsive img100">
+  </div>
+  </div>
+  <div class="col-md-2 col-sm-2 pa10">
+  <div class="grid-outer">
+  <img src="./assets/img/logo-2.jpg" class=" img-responsive img100">
+  </div>
+  </div>
+  <div class="col-md-2 col-sm-2 pa10">
+  <div class="grid-outer">
+  <img src="./assets/img/logo-3.jpg" class=" img-responsive img100">
+  </div>
+  </div>
+  <div class="col-md-2 col-sm-2 pa10">
+  <div class="grid-outer">
+  <img src="./assets/img/logo-5.jpg" class=" img-responsive img100">
+  </div>
+  </div>
+  <div class="col-md-2 col-sm-2 pa10">
+  <div class="grid-outer">
+  <img src="./assets/img/logo-6.jpg" class=" img-responsive img100">
+  </div>
+  </div>
+  <div class="col-md-2 col-sm-2 pa10">
+  <div class="grid-outer">
+  <img src="./assets/img/logo-7.jpg" class=" img-responsive img100">
+  </div>
+  </div>
+  <div class="col-md-2 col-sm-2 pa10">
+  <div class="grid-outer">
+  <img src="./assets/img/logo-8.jpg" class=" img-responsive img100">
+  </div>
+  </div>
+  <div class="col-md-2 col-sm-2 pa10">
+  <div class="grid-outer">
+  <img src="./assets/img/logo-9.jpg" class=" img-responsive img100">
+  </div>
+  </div>
+  <div class="col-md-2 col-sm-2 pa10">
+  <div class="grid-outer">
+  <img src="./assets/img/logo-10.jpg" class=" img-responsive img100">
+  </div>
+  </div>
+  <div class="col-md-2 col-sm-2 pa10">
+  <div class="grid-outer">
+  <img src="./assets/img/logo-11.jpg" class=" img-responsive img100">
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </section>
+
+
+<div class="pg-footer footer-area " >
+  <footer class="footer">
+    <svg class="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
+      <path class="footer-wave-path" d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"></path>
+    </svg>
+    <div class="footer-content">
+      <div class="footer-content-column">
+        <div class="footer-logo">
+          <a class="footer-logo-link" href="index.html">
+            <span class="hidden-link-text">LOGO</span>
+            <img src="./assets/img/logo.png" alt="" width="100" style="width:60%;">
+          </a>
+        </div>
+        <div class="footer-menu">
+          
+          <ul id="menu-get-started" class="footer-menu-list" style="align-items: center;display: flex;">
+            <li class="menu-item menu-item-type-post_type menu-item-object-product">
+              <a href="#" >Lorem ipsum dolor sit amet  suscipit expedita ipsa doloribus hic porro tempora vel!
+
+              </a>
+            </li>
+          
+          </ul>
+        </div>
+      </div>
+      <div class="footer-content-column">
+        <div class="footer-menu">
+          <h2 class="footer-menu-name"> Quick Links</h2>
+          <ul id="menu-company" class="footer-menu-list">
+            <li class="menu-item menu-item-type-post_type menu-item-object-page">
+              <a href="#">Home</a>
+            </li>
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
+              <a href="#">About Us</a>
+            </li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page">
+              <a href="#">Acadamic</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-menu">
+          <h2 class="footer-menu-name"> Departments</h2>
+          <ul id="menu-legal" class="footer-menu-list">
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-170434">
+              <a href="#">Addmission</a>
+            </li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page">
+              <a href="#">Faculty</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-content-column">
+        <div class="footer-menu">
+          <h2 class="footer-menu-name"> Quick Links</h2>
+          <ul id="menu-quick-links" class="footer-menu-list">
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <a target="_blank" rel="noopener noreferrer" href="#">Committes</a>
+            </li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <a target="_blank" rel="noopener noreferrer" href="#">Gallery</a>
+            </li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page">
+              <a href="#">Citizens Charter</a>
+            </li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page">
+              <a href="#">RTA ACT   </a>
+            </li>
+            <li class="menu-item menu-item-type-post_type_archive menu-item-object-customer">
+              <a href="#">Attendance Portal</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page">
+              <!-- <a href="#">Reviews</a> -->
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-content-column">
+        <div class="footer-call-to-action">
+          <h2 class="footer-call-to-action-title"> Contact Us</h2>
+          <p class="footer-call-to-action-description"> Have a support question?</p>
+          <a class=" btn-submit" href="#" target="_self"><strong> Get in Touch </strong></a>
+        </div>
+        <div class="footer-call-to-action">
+          <h2 class="footer-call-to-action-title"> You Call Us</h2>
+          <p class="footer-call-to-action-link-wrapper"> <a class="footer-call-to-action-link" href="tel:0124-64XXXX" target="_self"> 0124-64XXXX </a></p>
+          <p class="footer-call-to-action-link-wrapper"> <a class="footer-call-to-action-link text-break" href="tel:0124-64XXXX" target="_self">Medicalcollege@gmail.com </a></p>
+
+        </div>
+      </div>
+      <div class="footer-social-links"> <svg class="footer-social-amoeba-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 236 54">
+          <path class="footer-social-amoeba-path" d="M223.06,43.32c-.77-7.2,1.87-28.47-20-32.53C187.78,8,180.41,18,178.32,20.7s-5.63,10.1-4.07,16.7-.13,15.23-4.06,15.91-8.75-2.9-6.89-7S167.41,36,167.15,33a18.93,18.93,0,0,0-2.64-8.53c-3.44-5.5-8-11.19-19.12-11.19a21.64,21.64,0,0,0-18.31,9.18c-2.08,2.7-5.66,9.6-4.07,16.69s.64,14.32-6.11,13.9S108.35,46.5,112,36.54s-1.89-21.24-4-23.94S96.34,0,85.23,0,57.46,8.84,56.49,24.56s6.92,20.79,7,24.59c.07,2.75-6.43,4.16-12.92,2.38s-4-10.75-3.46-12.38c1.85-6.6-2-14-4.08-16.69a21.62,21.62,0,0,0-18.3-9.18C13.62,13.28,9.06,19,5.62,24.47A18.81,18.81,0,0,0,3,33a21.85,21.85,0,0,0,1.58,9.08,16.58,16.58,0,0,1,1.06,5A6.75,6.75,0,0,1,0,54H236C235.47,54,223.83,50.52,223.06,43.32Z"></path>
+        </svg>
+        <a class="footer-social-link linkedin" href="#" target="_blank">
+          <span class="hidden-link-text">Linkedin</span>
+          <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 30 30">
+            <path class="footer-social-icon-path" d="M9,25H4V10h5V25z M6.501,8C5.118,8,4,6.879,4,5.499S5.12,3,6.501,3C7.879,3,9,4.121,9,5.499C9,6.879,7.879,8,6.501,8z M27,25h-4.807v-7.3c0-1.741-0.033-3.98-2.499-3.98c-2.503,0-2.888,1.896-2.888,3.854V25H12V9.989h4.614v2.051h0.065 c0.642-1.18,2.211-2.424,4.551-2.424c4.87,0,5.77,3.109,5.77,7.151C27,16.767,27,25,27,25z"></path>
+          </svg>
+        </a>
+        <a class="footer-social-link twitter" href="#" target="_blank">
+          <span class="hidden-link-text">Twitter</span>
+          <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+            <path class="footer-social-icon-path" d="M 25.855469 5.574219 C 24.914063 5.992188 23.902344 6.273438 22.839844 6.402344 C 23.921875 5.75 24.757813 4.722656 25.148438 3.496094 C 24.132813 4.097656 23.007813 4.535156 21.8125 4.769531 C 20.855469 3.75 19.492188 3.113281 17.980469 3.113281 C 15.082031 3.113281 12.730469 5.464844 12.730469 8.363281 C 12.730469 8.773438 12.777344 9.175781 12.867188 9.558594 C 8.503906 9.339844 4.636719 7.246094 2.046875 4.070313 C 1.59375 4.847656 1.335938 5.75 1.335938 6.714844 C 1.335938 8.535156 2.261719 10.140625 3.671875 11.082031 C 2.808594 11.054688 2 10.820313 1.292969 10.425781 C 1.292969 10.449219 1.292969 10.46875 1.292969 10.492188 C 1.292969 13.035156 3.101563 15.15625 5.503906 15.640625 C 5.0625 15.761719 4.601563 15.824219 4.121094 15.824219 C 3.78125 15.824219 3.453125 15.792969 3.132813 15.730469 C 3.800781 17.8125 5.738281 19.335938 8.035156 19.375 C 6.242188 20.785156 3.976563 21.621094 1.515625 21.621094 C 1.089844 21.621094 0.675781 21.597656 0.265625 21.550781 C 2.585938 23.039063 5.347656 23.90625 8.3125 23.90625 C 17.96875 23.90625 23.25 15.90625 23.25 8.972656 C 23.25 8.742188 23.246094 8.515625 23.234375 8.289063 C 24.261719 7.554688 25.152344 6.628906 25.855469 5.574219 "></path>
+          </svg>
+        </a>
+        <a class="footer-social-link youtube" href="#" target="_blank">
+          <span class="hidden-link-text">Youtube</span>
+          <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+            <path class="footer-social-icon-path" d="M 15 4 C 10.814 4 5.3808594 5.0488281 5.3808594 5.0488281 L 5.3671875 5.0644531 C 3.4606632 5.3693645 2 7.0076245 2 9 L 2 15 L 2 15.001953 L 2 21 L 2 21.001953 A 4 4 0 0 0 5.3769531 24.945312 L 5.3808594 24.951172 C 5.3808594 24.951172 10.814 26.001953 15 26.001953 C 19.186 26.001953 24.619141 24.951172 24.619141 24.951172 L 24.621094 24.949219 A 4 4 0 0 0 28 21.001953 L 28 21 L 28 15.001953 L 28 15 L 28 9 A 4 4 0 0 0 24.623047 5.0546875 L 24.619141 5.0488281 C 24.619141 5.0488281 19.186 4 15 4 z M 12 10.398438 L 20 15 L 12 19.601562 L 12 10.398438 z"></path>
+          </svg>
+        </a>
+        <a class="footer-social-link github" href="#" target="_blank">
+          <span class="hidden-link-text">Github</span>
+          <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+            <path class="footer-social-icon-path" d="M 16 4 C 9.371094 4 4 9.371094 4 16 C 4 21.300781 7.4375 25.800781 12.207031 27.386719 C 12.808594 27.496094 13.027344 27.128906 13.027344 26.808594 C 13.027344 26.523438 13.015625 25.769531 13.011719 24.769531 C 9.671875 25.492188 8.96875 23.160156 8.96875 23.160156 C 8.421875 21.773438 7.636719 21.402344 7.636719 21.402344 C 6.546875 20.660156 7.71875 20.675781 7.71875 20.675781 C 8.921875 20.761719 9.554688 21.910156 9.554688 21.910156 C 10.625 23.746094 12.363281 23.214844 13.046875 22.910156 C 13.15625 22.132813 13.46875 21.605469 13.808594 21.304688 C 11.144531 21.003906 8.34375 19.972656 8.34375 15.375 C 8.34375 14.0625 8.8125 12.992188 9.578125 12.152344 C 9.457031 11.851563 9.042969 10.628906 9.695313 8.976563 C 9.695313 8.976563 10.703125 8.65625 12.996094 10.207031 C 13.953125 9.941406 14.980469 9.808594 16 9.804688 C 17.019531 9.808594 18.046875 9.941406 19.003906 10.207031 C 21.296875 8.65625 22.300781 8.976563 22.300781 8.976563 C 22.957031 10.628906 22.546875 11.851563 22.421875 12.152344 C 23.191406 12.992188 23.652344 14.0625 23.652344 15.375 C 23.652344 19.984375 20.847656 20.996094 18.175781 21.296875 C 18.605469 21.664063 18.988281 22.398438 18.988281 23.515625 C 18.988281 25.121094 18.976563 26.414063 18.976563 26.808594 C 18.976563 27.128906 19.191406 27.503906 19.800781 27.386719 C 24.566406 25.796875 28 21.300781 28 16 C 28 9.371094 22.628906 4 16 4 Z "></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="footer-copyright-wrapper">
+     
+          <div class="row mt-2 hideinsmall">
+
+            <div class="  col-sm-12 col-md-6 col-lg-4  text_footer_left">
+              <h4 class="font-14 text-center ">© 2024 GMC BHPL. All Rights Reserved.</h4>
+             
+            </div>
+           <div class="  col-sm-12 col-md-1 col-lg-5 "></div>
+            <div class=" col-sm-12  col-md-5 col-lg-3 text_footer_right">
+               
+                    <h4  class="font-14 text-center"> Designed By <span>
+                      <a href="https://www.svapps.in/" target="_blank"><img class="svapps_bt_logo "style="margin-top:-4px;" src="assets/img/svp-pic.png" alt="" style="width: 50%; margin-top: -13px;"> </a>
+                        </span>
+                    </h4>
+                
+            </div>
+        </div>
+     
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.nav-item.dropdown').hover(
+            function () {
+                $(this).addClass('show');
+                $(this).find('.dropdown-menu').addClass('show');
+            },
+            function () {
+                $(this).removeClass('show');
+                $(this).find('.dropdown-menu').removeClass('show');
+            }
+        );
+    });
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&display=swap" rel="stylesheet">
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script  src="./js/script_ii.js"></script>
+
+    <!-- JavaScript libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-zGjX5FTXsoaEF1pbo3YHiM5iL9o3w/D0V7hoqI4fF4mkj8H4Lh/OJc3Xa1kNOhMj" crossorigin="anonymous"></script> -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+      AOS.init();
+    </script>
+    
+    <script>
+        // Initialize Swiper
+        var swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+
+</body>
+</html>
