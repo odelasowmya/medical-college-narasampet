@@ -5,7 +5,10 @@
        width: 64%;
            margin-top: 5px;
 }
-
+.left-top{
+  display: flex;
+  justify-content: flex-end
+}
 .flex1{
     display: flex;
     align-items: center;
